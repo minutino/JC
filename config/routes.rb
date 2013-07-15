@@ -1,4 +1,6 @@
 JC::Application.routes.draw do
+  devise_for :users
+
   get 'about' => 'pages#about'
   get 'cameo' => 'pages#cameo'
   root :to => 'pages#home'
