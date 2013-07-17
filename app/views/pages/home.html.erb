@@ -1,9 +1,16 @@
+<% if user_signed_in?%>
+	<div class="hero-unit">
+  	<h1 allign= "center"> This is Your private Home page </h1>
+  	<h1 allign= "center"> ON JC </h1>
+	</div>
+<% else %>
 
-<div class="hero-unit">
-  	<h1>Welcome to JC Project</h1>
-  	<p> </p>
+	<div class="hero-unit">
+	  	<h1>Welcome to JC Project</h1>
+	  	<p> </p>
 
-		<p>
-			<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-primary btn-large" %> 
-		</p>
-</div>
+			<p>
+				<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-primary btn-large" %> 
+			</p>
+	</div>
+<% end %>
